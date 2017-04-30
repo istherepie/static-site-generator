@@ -1,0 +1,21 @@
+{% extends './master.html' %}
+{% block content %}
+<header class="topbar">
+	<h2>{{ page.title }}<span class="blinky"></span></h2>
+</header>
+<main class="container">
+
+	<div class="posts">
+		{% for post in page.custom %}
+		<div class="post">
+			<div class="post-date">
+				{{ post.date }}
+			</div>
+			<div class="post-title">
+				<a href="{{ post.path }}/{{ post.filename }}">{{ post.title }}</a>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</main>
+{% endblock %}

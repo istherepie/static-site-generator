@@ -1,0 +1,27 @@
+{
+  "name": "static-site-generator",
+  "version": "1.0.0",
+  "description": "Building a simple static site generator in NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "build": "NODE_PATH=. node index.js",
+    "dev": "npm run build;npm run stylus",
+    "stylus": "stylus -w _assets/stylus/app.styl -o site/assets/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {},
+  "keywords": [
+    "ssg",
+    "static site generator",
+    "nunjucks"
+  ],
+  "author": "Steffen Park <dev@istherepie.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dateformat": "^2.0.0",
+    "gray-matter": "^2.1.1",
+    "highlight.js": "^9.11.0",
+    "nunjucks": "^3.0.0",
+    "remarkable": "^1.7.1"
+  }
+}
